@@ -60,11 +60,19 @@ const App = () => {
 
             <hr/>
 
-            <p className='enLang'>
+            {/* <p className='enLang'>
               Don't register in the application, 
               because it doesn't work, please click <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a>, 
               follow the instructions, and login to the apps with the account you just created, 
               if you successfully login please restart your apps
+            </p> */}
+
+            <p className='enLang'>
+            Please follow the steps below. 
+            Do not use the account creation functionality within the application as it will not work. 
+            Press the <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> button below and follow the instructions 
+            to create an account and log into the app. 
+            After successfully logging in, restart the app.
             </p>
         </div>
 
