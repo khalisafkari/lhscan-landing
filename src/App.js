@@ -1,0 +1,99 @@
+// import logo from './logo.svg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+import './lovehug.css';
+
+const ImageImport  = (id) => {
+  return require(`${id}`);
+}
+
+const App = () => {
+  return (
+    <div className='container'>
+        <div className='header'>
+            <img src={ImageImport('./assets/logo.png')} alt='' className='logo' />
+            <p>V2.0.7</p>
+        </div>
+
+        <div className='appNotif'>
+
+            {/* <p className='jpLang'>
+              以前にプレイストア上のアプリケーションにアクセスできなかったユーザーの場合、
+              今、それは使用することができます、プレイストア上の新しいアプリケーションをダウンロードし、ログインしてください、
+              すでにwelovemanga.oneのアカウントを持っている人のために
+              そうでない場合は、アカウントの作成をクリックしてください, 登録のため、
+              アプリ内アカウントは機能せず、その後アプリを再起動します
+            </p> */}
+
+            <div className='follow'>please follow / 従ってください</div>
+
+            <p className='jpLang'>
+            アプリに登録しないと、
+            <a href='https://kutt.it/register-lovehug'>アカウントの作成</a> をクリックしても機能しません。
+            指示に従い、作成したアカウントでアプリにログインします。
+            ログインに成功したら、アプリを再起動してください
+            </p>
+
+            <hr/>
+
+            <p className='enLang'>
+            don't register in the application, 
+            because it doesn't work, please click <a href='https://kutt.it/register-lovehug'>create account</a>, 
+            follow the instructions, and login to the apps with the account you just created, 
+            if you successfully login please restart your apps
+            </p>
+        </div>
+
+
+
+        <div className='showBtn'>
+            <a className='createAccont' href='https://kutt.it/register-lovehug'>Create Account</a>
+            <a className='playStore' href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+              <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+            </a>
+
+            {/* <a className='virusTotal' href='https://www.virustotal.com/gui/file/c787a5e0349f51e6e5b91e2a849daea0867fbc8cdce9c3dec4e547d0bf534f8f?nocache=1'>
+                <img alt='virus total' src='https://upload.wikimedia.org/wikipedia/commons/b/b7/VirusTotal_logo.svg' />
+            </a> */}
+        </div>
+
+        <div className='showcase'>
+            <img src={ImageImport('./assets/001.jpeg')} alt='' />
+            <img src={ImageImport('./assets/002.jpeg')} alt='' />
+            <img src={ImageImport('./assets/003.jpeg')} alt='' />
+            <img src={ImageImport('./assets/004.jpeg')} alt='' />
+            <img src={ImageImport('./assets/005.jpeg')} alt='' />
+        </div>
+
+        <div className='appDes'>
+            <p>Read manga for free, daily updates</p>
+        </div>
+    </div>
+  )
+}
+
+export default App;
