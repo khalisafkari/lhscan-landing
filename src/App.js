@@ -52,26 +52,26 @@ const App = () => {
             <div className='follow'>please follow / 従ってください</div>
 
             <p className='jpLang'>
-            アプリに登録しないと、
-            <a href='https://kutt.it/register-lovehug'>アカウントの作成</a> をクリックしても機能しません。
-            指示に従い、作成したアカウントでアプリにログインします。
-            ログインに成功したら、アプリを再起動してください
+              下記の手順に従ってください。アプリケーション内のアカウント作成機能は動作しないので、
+              使用しないで下さい。以下の <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a>
+              ボタンを押して指示に沿ってアカウントを作りアプリにログインしてください。
+              ログインに成功した後はアプリを再起動してください。
             </p>
 
             <hr/>
 
             <p className='enLang'>
-            don't register in the application, 
-            because it doesn't work, please click <a href='https://kutt.it/register-lovehug'>create account</a>, 
-            follow the instructions, and login to the apps with the account you just created, 
-            if you successfully login please restart your apps
+              Don't register in the application, 
+              because it doesn't work, please click <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a>, 
+              follow the instructions, and login to the apps with the account you just created, 
+              if you successfully login please restart your apps
             </p>
         </div>
 
 
 
         <div className='showBtn'>
-            <a className='createAccont' href='https://kutt.it/register-lovehug'>Create Account</a>
+            <a className='createAccont' href='https://kutt.it/register-lovehug'>「CREATE ACCOUNT」</a>
             <a className='playStore' href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
               <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
             </a>
