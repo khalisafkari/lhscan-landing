@@ -49,7 +49,7 @@ const App = () => {
               アプリ内アカウントは機能せず、その後アプリを再起動します
             </p> */}
 
-            <div className='follow'>please follow / 従ってください</div>
+            <div className='follow'>Please follow / 下記の手順に従ってください</div>
 
             <p className='jpLang'>
               下記の手順に従ってください。アプリケーション内のアカウント作成機能は動作しないので、
