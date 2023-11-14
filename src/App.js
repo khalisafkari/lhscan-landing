@@ -106,7 +106,7 @@ const App = () => {
         </div>
 
         <div className='showBtn'>
-            <a className='playStore' href={ImageImport('./assets/nicomanga.apk')}>
+            <a className='playStore' href='https://github.com/khalisafkari/lhscan-landing/releases/download/3.0.3/nicomanga.apk'>
               <img style={{ maxHeight: 150 }} alt='Get it on Google Play' src={ImageImport('./assets/apk.png')}/>
             </a>
         </div>
