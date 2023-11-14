@@ -36,7 +36,7 @@ const App = () => {
     <div className='container'>
         <div className='header'>
             <img src={ImageImport('./assets/logo.png')} alt='' className='logo' />
-            <p>V2.0.7</p>
+            <p>V3.0.3</p>
         </div>
 
         <div className='appNotif'>
@@ -74,6 +74,22 @@ const App = () => {
             to create an account and log into the app. 
             After successfully logging in, restart the app.
             </p>
+
+            <p className='enLang'>
+              <h4>NOTE VERSION SUPPORT:</h4>
+              <h5 style={{
+                padding: 0,
+                marginTop: 5,
+                marginBottom:0,
+                fontWeight: 'bold',
+              }}>APK : MINIMAL ANDROID 5 / ANDROID LOLLIPOP </h5>
+              <h5  style={{
+                padding: 0,
+                marginTop: 5,
+                marginBottom:0,
+                fontWeight: 'bold',
+              }}>PLAYSTORE : MINIMAL ANDROID 11 / ANDROID Red Velvet Cake </h5>
+            </p>
         </div>
 
 
@@ -83,10 +99,16 @@ const App = () => {
             <a className='playStore' href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
               <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
             </a>
-
+          
             {/* <a className='virusTotal' href='https://www.virustotal.com/gui/file/c787a5e0349f51e6e5b91e2a849daea0867fbc8cdce9c3dec4e547d0bf534f8f?nocache=1'>
                 <img alt='virus total' src='https://upload.wikimedia.org/wikipedia/commons/b/b7/VirusTotal_logo.svg' />
             </a> */}
+        </div>
+
+        <div className='showBtn'>
+            <a className='playStore' href={ImageImport('./assets/nicomanga.apk')}>
+              <img style={{ maxHeight: 150 }} alt='Get it on Google Play' src={ImageImport('./assets/apk.png')}/>
+            </a>
         </div>
 
         <div className='showcase'>
