@@ -36,7 +36,7 @@ const App = () => {
     <div className='container'>
         <div className='header'>
             <img src={ImageImport('./assets/logo.png')} alt='' className='logo' />
-            <p>V3.0.3</p>
+            <p>V4.0.1</p>
         </div>
 
         <div className='appNotif'>
