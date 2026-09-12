@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Disclaimer for Lovehug">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="logo192.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    .legal-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--spacing-lg);
+      background: linear-gradient(135deg, var(--color-surface) 0%, #2a2a2a 100%);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-md);
+    }
+    .legal-content h2, .legal-content h3 {
+      color: var(--color-text);
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+    }
+    .legal-content h2:first-child, .legal-content h3:first-child {
+      margin-top: 0;
+    }
+    .legal-content p {
+      color: var(--color-text-muted);
+      line-height: 1.8;
+      margin-bottom: var(--spacing-md);
+    }
+    .legal-content a {
+      color: var(--color-accent);
+    }
+    .legal-content hr {
+      margin: var(--spacing-lg) 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: var(--spacing-lg);
+      color: var(--color-text-muted);
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      color: var(--color-accent);
+    }
+  </style>
+  
+  <title>Disclaimer - Lovehug</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Header with Language Switcher -->
+    <header class="header" style="margin-bottom: var(--spacing-lg);">
+      <div class="logo-container">
+        <img src="assets/images/logo.png" alt="Lovehug Logo" class="logo">
+        <span class="version">V5.0.0</span>
+      </div>
+      
+      <div class="lang-switcher">
+        <select id="lang-select" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Select Language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="zh">中文</option>
+          <option value="ko">한국어</option>
+          <option value="id">Bahasa Indonesia</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="legal-content">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      
+      <h2>Disclaimer for Lovehug</h2>
+      
+      <hr/>
+
+      <p>We are doing our best to prepare the content of this app. However, Lovehug cannot warranty the expressions and suggestions of the contents, as well as its accuracy. Lovehug shall not be responsible for any losses and/or damages due to the usage of the information on our app. Our Disclaimer was generated with the help of the <a href="https://www.app-privacy-policy.com/app-disclaimer-generator/">App Disclaimer Generator from App-Privacy-Policy.com</a></p>
+
+      <p>By using our app, you hereby consent to our disclaimer and agree to its terms.</p>
+
+      <p>Any links contained in our app may lead to external sites are provided for convenience only. Any information or statements that appeared in these sites or app are not sponsored, endorsed, or otherwise approved by Lovehug. For these external sites, Lovehug cannot be held liable for the availability of, or the content located on or through it. Plus, any losses or damages occurred from using these contents or the internet generally.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span>Legal & Policies</span>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="eula.html">EULA</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="os.html">Open Source</a>
+        </div>
+        <p class="copyright">&copy; 2024 Lovehug. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- i18n Script -->
+  <script src="js/i18n.js"></script>
+</body>
+</html>

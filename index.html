@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="description" content="Lovehug | Read manga for free, daily updates">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="logo192.png">
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <title data-i18n="meta.title">Lovehug</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-container">
+        <img src="assets/images/logo.png" alt="Lovehug Logo" class="logo">
+        <span class="version" data-i18n="header.version">V5.0.0</span>
+      </div>
+      
+      <!-- Language Switcher -->
+      <div class="lang-switcher">
+        <select id="lang-select" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Select Language">
+          <option value="en" data-i18n="lang.en">English</option>
+          <option value="ja" data-i18n="lang.ja">日本語</option>
+          <option value="vi" data-i18n="lang.vi">Tiếng Việt</option>
+          <option value="zh" data-i18n="lang.zh">中文</option>
+          <option value="ko" data-i18n="lang.ko">한국어</option>
+          <option value="id" data-i18n="lang.id">Bahasa Indonesia</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- App Notification -->
+    <main class="appNotif">
+      <div class="follow" data-i18n="follow.title">Please follow / 下記の手順に従ってください</div>
+
+      <!-- Japanese text (always shown) -->
+      <p class="jpLang" data-i18n="jpLang.text">
+        下記の手順に従ってください。アプリケーション内のアカウント作成機能は動作しないので、使用しないで下さい。以下の <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> ボタンを押して指示に沿ってアカウントを作りアプリにログインしてください。ログインに成功した後はアプリを再起動してください。
+      </p>
+
+      <hr/>
+
+      <!-- English text (translatable) -->
+      <p class="enLang" data-i18n="enLang.text">
+        Please follow the steps below. Do not use the account creation functionality within the application as it will not work. Press the <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> button below and follow the instructions to create an account and log into the app. After successfully logging in, restart the app.
+      </p>
+
+      <!-- Version Notes -->
+      <div class="version-note">
+        <h4 data-i18n="note.version.support">NOTE VERSION SUPPORT:</h4>
+        <h5 data-i18n="note.apk">APK : MINIMAL ANDROID 5 / ANDROID LOLLIPOP</h5>
+        <h5 data-i18n="note.playstore">PLAYSTORE : MINIMAL ANDROID 11 / ANDROID Red Velvet Cake</h5>
+      </div>
+    </main>
+
+    <!-- Buttons -->
+    <div class="showBtn">
+      <a class="btn createAccount" href='https://kutt.it/register-lovehug' target='_blank' rel="noopener noreferrer">
+        <span data-i18n="btn.create.account">「CREATE ACCOUNT」</span>
+      </a>
+      <a class="btn playStore" href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target='_blank' rel="noopener noreferrer">
+        <img src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' alt='Get it on Google Play'>
+      </a>
+    </div>
+
+    <!-- APK Download Button -->
+    <div class="showBtn">
+      <a class="btn" href='https://kutt.it/apps_303_nicomanga' target='_blank' rel="noopener noreferrer">
+        <img src="assets/images/apk.png" alt="Download APK">
+      </a>
+    </div>
+
+    <!-- Showcase Images -->
+    <div class="showcase">
+      <img src="assets/images/001.jpeg" alt="Screenshot 1">
+      <img src="assets/images/002.jpeg" alt="Screenshot 2">
+      <img src="assets/images/003.jpeg" alt="Screenshot 3">
+      <img src="assets/images/004.jpeg" alt="Screenshot 4">
+      <img src="assets/images/005.jpeg" alt="Screenshot 5">
+    </div>
+
+    <!-- App Description -->
+    <div class="appDes">
+      <p data-i18n="app.description">Read manga for free, daily updates</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-links">
+          <span data-i18n="footer.links">Legal & Policies</span>
+          <a href="terms.html" data-i18n="footer.terms">Terms</a>
+          <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+          <a href="eula.html" data-i18n="footer.eula">EULA</a>
+          <a href="disclaimer.html" data-i18n="footer.disclaimer">Disclaimer</a>
+          <a href="os.html" data-i18n="footer.opensource">Open Source</a>
+        </div>
+        <p class="copyright">&copy; 2024 Lovehug. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- i18n Script -->
+  <script src="js/i18n.js"></script>
+</body>
+</html>
