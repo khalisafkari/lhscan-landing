@@ -1,1 +1,991 @@
-(css/styles.css is a source file, and there are no build artifacts, dependencies, or temporary files in the changes)
+```
+# Dependencies
+node_modules/
+
+# Logs and temp files
+*.log
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# Build artifacts
+dist/
+build/
+target/
+coverage/
+htmlcov/
+.coverage
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Compression files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+
+# Dependency directories
+.julia/
+zig*/
+julia-*/
+
+# Webpack and bundler artifacts
+webpack.config.js
+*.bundle.js
+*.min.js
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# IDE specific
+.vs/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated
+ehthumbs.db
+Icon?
+Network Trash Folder
+Temporary Items
+.Trashes
+*.DS_Store
+._*
+
+# Testing
+*.test.js
+*.spec.js
+test/
+tests/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Secrets and keys
+*.key
+*.pem
+*.crt
+*.cert
+id_rsa
+id_dsa
+
+# Backup files
+*~
+*.bak
+*.old
+*.orig
+
+# Documentation
+doc/
+docs/
+
+# Temporary build outputs
+.tmp/
+temp/
+
+# NPM and Yarn cache
+.npm/
+.yarn/
+.yarn-cache/
+
+# Bower
+bower_components/
+
+# Ruby
+.bundle/
+Gemfile.lock
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+# C/C++
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.o
+*.obj
+
+# Go
+*.exe
+*.test
+*.prof
+*.syso
+
+# Rust
+Cargo.lock
+*.so
+*.dylib
+*.dll
+target/
+
+# PHP
+vendor/
+
+# Scala
+lib_managed/
+src_managed/
+target/
+
+# Clojure
+target/
+*.class
+
+# Puppet
+spec/fixtures/
+*.pp.bak
+
+# Chef
+cookbooks/
+site-cookbooks/
+
+# Gradle
+.gradle/
+build/
+
+# Android
+*.apk
+*.aar
+*.dex
+app/build/
+
+# iOS
+*.ipa
+*.app
+*.xcworkspace/
+Pods/
+
+# Unity
+Library/
+Temp/
+Obj/
+Build/
+*.unityproj
+
+# Unreal Engine
+Binaries/
+Intermediate/
+Saved/
+*.uproject
+
+# Cocos Creator
+library/
+temp/
+build/
+
+# Electron
+release/
+dist_electron/
+
+# Docker
+.docker/
+docker-compose*.yml
+
+# Kubernetes
+*.kubeconfig
+
+# Terraform
+*.tfstate
+*.tfvars
+.terraform/
+
+# Ansible
+*.retry
+
+# Vagrant
+.vagrant/
+
+# VirtualEnv
+venv/
+.venv/
+env/
+ENV/
+
+# Conda
+.conda/
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+dependency-reduced-pom.xml
+
+# SBT
+target/
+lib_managed/
+src_managed/
+
+# Leiningen
+target/
+test/resources/logback-test.xml
+
+# Haskell
+dist/
+dist-*
+cabal.sandbox.config
+*.o
+*.hi
+
+# Elixir
+mix.lock
+erl_crash.dump
+*.ez
+
+# Elm
+elm-stuff/
+*.elmi
+*.elmo
+
+# Julia
+.julia/
+.Julia.history
+
+# Lua
+?.lua.c
+
+# Perl
+*.o
+*.pl.storable
+
+# Erlang
+.erlang.cookie
+.eunit/
+ebin/
+*.beam
+
+# OCaml
+*.o
+*.cmi
+*.cmo
+*.cmx
+*.cma
+*.cmxa
+*.annot
+*.spot
+*.spit
+*.cmt
+*.cmti
+*.merlin
+
+# PureScript
+.output/
+psc*.json
+
+# Flash
+*.swf
+*.as
+*.fla
+
+# Objective-C
+*.xcodeproj/
+*.xcworkspace/
+*.framework/
+*.app
+
+# Swift
+*.xcodeproj/
+*.xcworkspace/
+*.swiftmodule/
+
+# Qt
+*.pro.user
+*.pro.user.*
+*.qm
+
+# Lazarus
+*.lpi
+*.lps
+*.lrs
+*.lfm
+*.oro
+*.compiled
+*.o
+*.ppu
+*.o.d
+*.compiled.d
+*.local
+*.cfg
+*.identcache
+*.dpr
+*.res
+*.rej
+
+# CodeLite
+*.project
+*.workspace
+*.user
+*.layout
+.codelite/
+
+# Dev-C++
+*.dev
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+.externalToolBuilders/
+.launch
+.screenrc
+.project
+.cproject
+.buildpath
+
+# NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.netbeans/
+*.priv
+
+# IntelliJ IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio Code
+.vscode/
+
+# Mono
+*.pidb
+*.metadata
+
+# Nemerle
+*.nbc
+
+# Code::Blocks
+*.depend
+*.layout
+*.cbp
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.manifest
+install_manifest.txt
+*.cmake
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+*.moc.cpp
+*.qm
+*.prl
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.swm
+*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# Brackets
+brackets.json
+.sass-cache/
+
+# WebStorm
+.idea/
+
+# PhpStorm
+.idea/
+
+# PyCharm
+.idea/
+
+# RubyMine
+.idea/
+
+# AppCode
+.idea/
+
+# CLion
+.idea/
+
+# GoLand
+.idea/
+
+# DataGrip
+.idea/
+
+# Rider
+.idea/
+
+# Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+*.ap_
+captures/
+*.keystore
+*.jks
+
+# Dart
+.dart_tool/
+.packages
+.pub/
+build/
+
+# Flutter
+.dart_tool/
+.packages
+.pub/
+build/
+flutter_export_environment.sh
+
+# NativeScript
+hooks/
+platforms/
+node_modules/
+*.apk
+*.aab
+*.ipa
+
+# Ionic
+ionic.config.json
+*.keystore
+*.jks
+
+# Cordova
+hooks/
+platforms/
+plugins/
+config.xml
+
+# PhoneGap
+hooks/
+platforms/
+plugins/
+config.xml
+
+# React Native
+node_modules/
+*.log
+ios/Pods/
+android/build/
+android/app/build/
+
+# Expo
+.expo/
+.expo-shared/
+
+# Capacitor
+node_modules/
+capacitor.config.json
+android/
+ios/
+
+# Ionic Capacitor
+node_modules/
+capacitor.config.json
+android/
+ios/
+
+# Meteor
+.meteor/local/
+
+# Aurelia
+node_modules/
+aurelia_project/
+
+# Vue CLI
+node_modules/
+dist/
+public/dist/
+*.log
+
+# Angular CLI
+node_modules/
+dist/
+dist/
+tmp/
+.angular-cli.json
+angular.json
+
+# Create React App
+node_modules/
+build/
+*.log
+
+# Gatsby
+node_modules/
+public/
+.cache/
+gatsby-config.js
+gatsby-node.js
+gatsby-browser.js
+gatsby-ssr.js
+
+# Next.js
+node_modules/
+.next/
+out/
+*.log
+
+# Nuxt.js
+node_modules/
+.nuxt/
+dist/
+*.log
+
+# Gridsome
+node_modules/
+dist/
+.gridcoin/
+*.log
+
+# Docusaurus
+node_modules/
+build/
+.docusaurus/
+*.log
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+*.gem
+*.gemspec
+Gemfile.lock
+vendor/
+
+# Hugo
+public/
+resources/_gen/
+*.log
+
+# Middleman
+build/
+*.log
+
+# Metalsmith
+build/
+*.log
+
+# Hexo
+public/
+*.log
+
+# GitBook
+_book/
+*.log
+
+# Sphinx
+_build/
+*.log
+
+# MkDocs
+site/
+*.log
+
+# DocPad
+out/
+output/
+*.log
+
+# Phenomic
+dist/
+public/
+*.log
+
+# Wintersmith
+build/
+*.log
+
+# Harp
+public/
+*.log
+
+# Roots
+public/
+*.log
+
+# DocPad
+out/
+output/
+*.log
+
+# Git
+.git/
+!.gitignore
+
+# GitHub
+.github/
+
+# GitLab
+.gitlab/
+
+# Bitbucket
+.bitbucket/
+
+# SVN
+.svn/
+
+# Mercurial
+.hg/
+
+# Bazaar
+.bzr/
+
+# CVS
+.CVS/
+,cvs/
+CVS/
+
+# RCS
+,RCS/
+RCS/
+
+# SCCS
+,sccs/
+SCCS/
+
+# Arch
+.arch-ids/
+{arch}/
+
+# Monotone
+,MonoHistory
+
+# darcs
+_dist/
+.darcs/
+darcs-backup*
+
+# fossil
+.fslckout
+.fossil-settings/
+
+# msysgit
+.gitmodules
+
+# Mac
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Icon?
+Network Trash Folder
+Temporary Items
+.RECYCLE.BIN/
+
+# Desktop
+Desktop.ini
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.swm
+*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Nano
+*.bak~
+
+# Kate
+*.kate-swp
+
+# Gedit
+*~
+
+# Mousepad
+*~
+
+# Eclipse
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# NetBeans
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+.netbeans/
+
+# Code::Blocks
+*.depend
+*.layout
+*.cbp
+
+# Dev-C++
+*.dev
+
+# Qt
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+*.moc.cpp
+*.qm
+*.prl
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# Brackets
+brackets.json
+.sass-cache/
+
+# WebStorm
+.idea/
+
+# PhpStorm
+.idea/
+
+# PyCharm
+.idea/
+
+# RubyMine
+.idea/
+
+# AppCode
+.idea/
+
+# CLion
+.idea/
+
+# GoLand
+.idea/
+
+# DataGrip
+.idea/
+
+# Rider
+.idea/
+
+# Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+*.ap_
+captures/
+*.keystore
+*.jks
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.filters
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio Code
+.vscode/
+
+# Mono
+*.pidb
+*.metadata
+
+# Nemerle
+*.nbc
+
+# Code::Blocks
+*.depend
+*.layout
+*.cbp
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.manifest
+install_manifest.txt
+*.cmake
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+*.moc.cpp
+*.qm
+*.prl
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+*.swm
+*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# Brackets
+brackets.json
+.sass-cache/
+
+# WebStorm
+.idea/
+
+# PhpStorm
+.idea/
+
+# PyCharm
+.idea/
+
+# RubyMine
+.idea/
+
+# AppCode
+.idea/
+
+# CLion
+.idea/
+
+# GoLand
+.idea/
+
+# DataGrip
+.idea/
+
+# Rider
+.idea/
+
+# Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+*.ap_
+captures/
+*.keystore
+*.jks
+
+```
