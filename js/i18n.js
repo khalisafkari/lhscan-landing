@@ -24,6 +24,16 @@
   let translations = {};
   let currentLang = DEFAULT_LANG;
 
+  // Play Store badge URLs for each language
+  const PLAYSTORE_BADGES = {
+    en: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+    ja: "https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png",
+    vi: "https://play.google.com/intl/vi_vn/badges/static/images/badges/vi_badge_web_generic.png",
+    zh: "https://play.google.com/intl/zh_cn/badges/static/images/badges/zh_badge_web_generic.png",
+    ko: "https://play.google.com/intl/ko_kr/badges/static/images/badges/ko_badge_web_generic.png",
+    id: "https://play.google.com/intl/id_id/badges/static/images/badges/id_badge_web_generic.png"
+  };
+
   function getStoredLanguage() {
     try {
       return localStorage.getItem(STORAGE_KEY);
@@ -84,38 +94,24 @@
   }
 
   function getPlayStoreBadgeUrl(lang) {
-    const badges = {
-      en: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
-      ja: "https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png",
-      vi: "https://play.google.com/intl/vi_vn/badges/static/images/badges/vi_badge_web_generic.png",
-      zh: "https://play.google.com/intl/zh_cn/badges/static/images/badges/zh_badge_web_generic.png",
-      ko: "https://play.google.com/intl/ko_kr/badges/static/images/badges/ko_badge_web_generic.png",
-      id: "https://play.google.com/intl/id_id/badges/static/images/badges/id_badge_web_generic.png"
-    };
-    return badges[lang] || badges.en;
+    return PLAYSTORE_BADGES[lang] || PLAYSTORE_BADGES.en;
   }
 
   function applyTranslations() {
     console.log('[i18n] Applying translations for:', currentLang);
     console.log('[i18n] Translations keys:', Object.keys(translations));
     
+    // Apply text translations
     document.querySelectorAll('[data-i18n]').forEach(function(element) {
       var key = element.getAttribute('data-i18n');
-      var keys = key.split('.');
-      var value = translations;
+      var value = translations[key];
       
-      for (var i = 0; i < keys.length; i++) {
-        value = value[keys[i]];
-        if (value === undefined || value === null) break;
-      }
-
       if (value !== undefined && value !== null && value !== '') {
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
           element.value = value;
-        } else if (element.tagName === 'IMG') {
-          if (element.alt === 'Get it on Google Play' || element.classList.contains('playstore-badge')) {
-            element.src = getPlayStoreBadgeUrl(currentLang);
-          }
+        } else if (element.tagName === 'IMG' && element.id === 'playstore-img') {
+          // Update Play Store badge
+          element.src = getPlayStoreBadgeUrl(currentLang);
           element.alt = value;
         } else {
           element.innerHTML = value;
@@ -125,24 +121,30 @@
       }
     });
 
-    document.querySelectorAll('img[src*="play.google.com"]').forEach(function(img) {
-      img.src = getPlayStoreBadgeUrl(currentLang);
-    });
+    // Always update Play Store badge if it exists
+    var playstoreImg = document.getElementById('playstore-img');
+    if (playstoreImg) {
+      playstoreImg.src = getPlayStoreBadgeUrl(currentLang);
+    }
 
+    // Fix any kutt.it links
     document.querySelectorAll('a[href*="kutt.it"]').forEach(function(link) {
       link.href = link.href.replace('kutt.it', 'kutt.to');
     });
 
+    // Update title
     var titleEl = document.querySelector('title');
     if (titleEl && translations['meta.title']) {
       titleEl.textContent = translations['meta.title'];
     }
 
+    // Update meta description
     var metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && translations['meta.description']) {
       metaDesc.setAttribute('content', translations['meta.description']);
     }
 
+    // Update html lang attribute
     document.documentElement.lang = currentLang;
     console.log('[i18n] Translations applied successfully');
   }
