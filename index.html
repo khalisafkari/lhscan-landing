@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0a0a0a">
   <meta name="description" content="Lovehug | Read manga for free, daily updates">
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="logo192.png">
+  <link rel="icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logo192.png">
   <link rel="manifest" href="manifest.json">
   
   <!-- Google Fonts -->
@@ -45,16 +45,9 @@
     <main class="appNotif">
       <div class="follow" data-i18n="follow.title">Please follow / 下記の手順に従ってください</div>
 
-      <!-- Japanese text (always shown) -->
-      <p class="jpLang" data-i18n="jpLang.text">
-        下記の手順に従ってください。アプリケーション内のアカウント作成機能は動作しないので、使用しないで下さい。以下の <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> ボタンを押して指示に沿ってアカウントを作りアプリにログインしてください。ログインに成功した後はアプリを再起動してください。
-      </p>
-
-      <hr/>
-
-      <!-- English text (translatable) -->
-      <p class="enLang" data-i18n="enLang.text">
-        Please follow the steps below. Do not use the account creation functionality within the application as it will not work. Press the <a href='https://kutt.it/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> button below and follow the instructions to create an account and log into the app. After successfully logging in, restart the app.
+      <!-- Main content text (translatable) -->
+      <p class="main-text" data-i18n="main.text">
+        Please follow the steps below. Do not use the account creation functionality within the application as it will not work. Press the <a href='https://kutt.to/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> button below and follow the instructions to create an account and log into the app. After successfully logging in, restart the app.
       </p>
 
       <!-- Version Notes -->
@@ -67,17 +60,17 @@
 
     <!-- Buttons -->
     <div class="showBtn">
-      <a class="btn createAccount" href='https://kutt.it/register-lovehug' target='_blank' rel="noopener noreferrer">
+      <a class="btn createAccount" href='https://kutt.to/register-lovehug' target='_blank' rel="noopener noreferrer">
         <span data-i18n="btn.create.account">「CREATE ACCOUNT」</span>
       </a>
       <a class="btn playStore" href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target='_blank' rel="noopener noreferrer">
-        <img src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' alt='Get it on Google Play'>
+        <img src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' alt='Get it on Google Play' class="playstore-badge">
       </a>
     </div>
 
     <!-- APK Download Button -->
     <div class="showBtn">
-      <a class="btn" href='https://kutt.it/apps_303_nicomanga' target='_blank' rel="noopener noreferrer">
+      <a class="btn apk-download" href='https://kutt.to/apps_303_nicomanga' target='_blank' rel="noopener noreferrer">
         <img src="assets/images/apk.png" alt="Download APK">
       </a>
     </div>
