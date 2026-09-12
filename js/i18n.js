@@ -26,11 +26,11 @@
 
   // Play Store badge URLs for each language
   const PLAYSTORE_BADGES = {
-    en: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+    en: "../assets/images/en.png",
     ja: "../assets/images/jp.png",
     vi: "../assets/images/vn.png",
     zh: "../assets/images/cn.png",
-    ko: "..assets/images/kr.png",
+    ko: "../assets/images/kr.png",
     id: "../assets/images/id.png"
   };
 
