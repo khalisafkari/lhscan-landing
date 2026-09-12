@@ -27,11 +27,11 @@
   // Play Store badge URLs for each language
   const PLAYSTORE_BADGES = {
     en: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
-    ja: "https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png",
-    vi: "https://play.google.com/intl/vi_vn/badges/static/images/badges/vi_badge_web_generic.png",
-    zh: "https://play.google.com/intl/zh_cn/badges/static/images/badges/zh_badge_web_generic.png",
-    ko: "https://play.google.com/intl/ko_kr/badges/static/images/badges/ko_badge_web_generic.png",
-    id: "https://play.google.com/intl/id_id/badges/static/images/badges/id_badge_web_generic.png"
+    ja: "../assets/images/jp.png",
+    vi: "../assets/images/vn.png",
+    zh: "../assets/images/cn.png",
+    ko: "..assets/images/kr.png",
+    id: "../assets/images/id.png"
   };
 
   function getStoredLanguage() {
