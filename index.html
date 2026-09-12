@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0a0a0a">
   <meta name="description" content="Lovehug | Read manga for free, daily updates">
-  <link rel="icon" href="assets/images/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/images/logo192.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="logo192.png">
   <link rel="manifest" href="manifest.json">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -25,7 +25,10 @@
     <header class="header">
       <div class="logo-container">
         <img src="assets/images/logo.png" alt="Lovehug Logo" class="logo">
-        <span class="version" data-i18n="header.version">V5.0.0</span>
+        <div class="logo-text-wrapper">
+          <h1 class="logo-text">Lovehug</h1>
+          <span class="version" data-i18n="header.version">V5.0.0</span>
+        </div>
       </div>
       
       <!-- Language Switcher -->
@@ -41,9 +44,17 @@
       </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2 class="hero-title" data-i18n="hero.title">Your Ultimate Manga Reader</h2>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Read manga for free with daily updates</p>
+      </div>
+    </section>
+
     <!-- App Notification -->
     <main class="appNotif">
-      <div class="follow" data-i18n="follow.title">Please follow / 下記の手順に従ってください</div>
+      <div class="follow" data-i18n="follow.title">Please follow the steps below</div>
 
       <!-- Main content text (translatable) -->
       <p class="main-text" data-i18n="main.text">
@@ -58,53 +69,85 @@
       </div>
     </main>
 
-    <!-- Buttons -->
-    <div class="showBtn">
-      <a class="btn createAccount" href='https://kutt.to/register-lovehug' target='_blank' rel="noopener noreferrer">
-        <span data-i18n="btn.create.account">「CREATE ACCOUNT」</span>
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <a class="btn btn-create" href='https://kutt.to/register-lovehug' target='_blank' rel="noopener noreferrer">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+          <circle cx="9" cy="7" r="4"></circle>
+          <line x1="19" y1="8" x2="19" y2="14"></line>
+          <line x1="22" y1="11" x2="16" y2="11"></line>
+        </svg>
+        <span data-i18n="btn.create.account">CREATE ACCOUNT</span>
       </a>
-      <a class="btn playStore" href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target='_blank' rel="noopener noreferrer">
+      
+      <a class="btn btn-playstore" href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target='_blank' rel="noopener noreferrer">
         <img src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' alt='Get it on Google Play' class="playstore-badge">
       </a>
-    </div>
-
-    <!-- APK Download Button -->
-    <div class="showBtn">
-      <a class="btn apk-download" href='https://kutt.to/apps_303_nicomanga' target='_blank' rel="noopener noreferrer">
-        <img src="assets/images/apk.png" alt="Download APK">
+      
+      <a class="btn btn-apk" href='https://kutt.to/apps_303_nicomanga' target='_blank' rel="noopener noreferrer">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span data-i18n="btn.download.apk">DOWNLOAD APK</span>
       </a>
     </div>
 
     <!-- Showcase Images -->
-    <div class="showcase">
-      <img src="assets/images/001.jpeg" alt="Screenshot 1">
-      <img src="assets/images/002.jpeg" alt="Screenshot 2">
-      <img src="assets/images/003.jpeg" alt="Screenshot 3">
-      <img src="assets/images/004.jpeg" alt="Screenshot 4">
-      <img src="assets/images/005.jpeg" alt="Screenshot 5">
-    </div>
+    <section class="showcase-section">
+      <h3 class="section-title" data-i18n="showcase.title">App Preview</h3>
+      <div class="showcase">
+        <img src="assets/images/001.jpeg" alt="Screenshot 1">
+        <img src="assets/images/002.jpeg" alt="Screenshot 2">
+        <img src="assets/images/003.jpeg" alt="Screenshot 3">
+        <img src="assets/images/004.jpeg" alt="Screenshot 4">
+        <img src="assets/images/005.jpeg" alt="Screenshot 5">
+      </div>
+    </section>
 
-    <!-- App Description -->
-    <div class="appDes">
-      <p data-i18n="app.description">Read manga for free, daily updates</p>
-    </div>
+    <!-- Features -->
+    <section class="features">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h4 data-i18n="feature.free.title">Free to Read</h4>
+        <p data-i18n="feature.free.desc">Access thousands of manga titles completely free</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <h4 data-i18n="feature.updates.title">Daily Updates</h4>
+        <p data-i18n="feature.updates.desc">New chapters added every day</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h4 data-i18n="feature.mobile.title">Mobile Optimized</h4>
+        <p data-i18n="feature.mobile.desc">Perfect reading experience on any device</p>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
+        <div class="footer-logo">
+          <img src="assets/images/logo.png" alt="Lovehug">
+          <p data-i18n="footer.tagline">Your favorite manga reader</p>
+        </div>
         <div class="footer-links">
-          <span data-i18n="footer.links">Legal & Policies</span>
-          <a href="terms.html" data-i18n="footer.terms">Terms</a>
-          <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
-          <a href="eula.html" data-i18n="footer.eula">EULA</a>
-          <a href="disclaimer.html" data-i18n="footer.disclaimer">Disclaimer</a>
-          <a href="os.html" data-i18n="footer.opensource">Open Source</a>
+          <span class="footer-heading" data-i18n="footer.links">Legal & Policies</span>
+          <div class="link-group">
+            <a href="terms.html" data-i18n="footer.terms">Terms</a>
+            <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
+            <a href="eula.html" data-i18n="footer.eula">EULA</a>
+            <a href="disclaimer.html" data-i18n="footer.disclaimer">Disclaimer</a>
+            <a href="os.html" data-i18n="footer.opensource">Open Source</a>
+          </div>
         </div>
         <p class="copyright">&copy; 2024 Lovehug. All rights reserved.</p>
       </div>
     </footer>
   </div>
-
+  
   <!-- i18n Script -->
   <script src="js/i18n.js"></script>
 </body>
