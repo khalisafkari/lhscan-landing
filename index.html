@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Lovehug | Read manga for free, daily updates">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="logo192.png">
+    <link rel="manifest" href="manifest.json">
+    <title>Lovehug - Read Manga Free</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --primary-color: #ff4757;
+            --primary-hover: #ff6b7a;
+            --bg-dark: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #252525;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --border-radius: 12px;
+            --border-radius-sm: 8px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 8px 30px rgba(255, 71, 87, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-hover) 100%);
+            border-radius: var(--border-radius);
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(255, 71, 87, 0.3));
+        }
+        
+        .header-info {
+            flex: 1;
+        }
+        
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header-version {
+            font-family: 'Newsreader', serif;
+            font-size: 12px;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        
+        /* App Notification */
+        .app-notif {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .follow-badge {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            border-radius: var(--border-radius-sm);
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .notif-content {
+            font-family: 'Newsreader', serif;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        
+        .notif-content p {
+            margin-bottom: 16px;
+        }
+        
+        .notif-content a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        
+        .notif-content a:hover {
+            background: rgba(255, 71, 87, 0.1);
+            color: var(--primary-hover);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            margin: 24px 0;
+            border: none;
+        }
+        
+        .version-note {
+            background: rgba(255, 71, 87, 0.05);
+            border-left: 3px solid var(--primary-color);
+            padding: 16px 20px;
+            border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+            margin-top: 20px;
+        }
+        
+        .version-note h4 {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .version-note h5 {
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .version-note h5:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Action Buttons */
+        .action-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 16px 24px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            min-height: 70px;
+        }
+        
+        .btn:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(255, 71, 87, 0.3);
+        }
+        
+        .btn-create {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+            color: var(--text-primary);
+            border: none;
+        }
+        
+        .btn-create:hover {
+            background: linear-gradient(135deg, var(--primary-hover) 0%, #ff8fa3 100%);
+            box-shadow: 0 8px 30px rgba(255, 71, 87, 0.4);
+        }
+        
+        .btn img {
+            max-height: 50px;
+            width: auto;
+        }
+        
+        .btn-apk img {
+            max-height: 60px;
+        }
+        
+        /* Showcase Gallery */
+        .showcase-section {
+            margin-bottom: 24px;
+        }
+        
+        .showcase {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 16px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) var(--bg-card);
+        }
+        
+        .showcase::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .showcase::-webkit-scrollbar-track {
+            background: var(--bg-card);
+            border-radius: 4px;
+        }
+        
+        .showcase::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        .showcase img {
+            flex-shrink: 0;
+            width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .showcase img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 71, 87, 0.3);
+        }
+        
+        /* App Description */
+        .app-description {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-hover) 100%);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .app-description p {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .header-title {
+                font-size: 24px;
+            }
+            
+            .app-notif {
+                padding: 20px;
+            }
+            
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .showcase img {
+                width: 160px;
+                height: 220px;
+            }
+            
+            .app-description p {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-title {
+                font-size: 20px;
+            }
+            
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .showcase img {
+                width: 140px;
+                height: 200px;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header,
+        .app-notif,
+        .action-buttons,
+        .showcase-section,
+        .app-description {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .app-notif {
+            animation-delay: 0.1s;
+        }
+        
+        .action-buttons {
+            animation-delay: 0.2s;
+        }
+        
+        .showcase-section {
+            animation-delay: 0.3s;
+        }
+        
+        .app-description {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <img src="assets/logo.png" alt="Lovehug Logo" class="logo">
+            <div class="header-info">
+                <h1 class="header-title">Lovehug</h1>
+                <p class="header-version">Version 5.0.0</p>
+            </div>
+        </header>
+        
+        <!-- App Notification Section -->
+        <section class="app-notif">
+            <div class="follow-badge">Please Follow / 下記の手順に従ってください</div>
+            
+            <div class="notif-content">
+                <p class="jp-lang">
+                    下記の手順に従ってください。アプリケーション内のアカウント作成機能は動作しないので、
+                    使用しないで下さい。以下の <a href="https://kutt.it/register-lovehug" target="_blank" rel="noopener noreferrer">「Create Account」</a>
+                    ボタンを押して指示に沿ってアカウントを作りアプリにログインしてください。
+                    ログインに成功した後はアプリを再起動してください。
+                </p>
+                
+                <hr class="divider">
+                
+                <p class="en-lang">
+                    Please follow the steps below. 
+                    Do not use the account creation functionality within the application as it will not work. 
+                    Press the <a href="https://kutt.it/register-lovehug" target="_blank" rel="noopener noreferrer">「Create Account」</a> button below and follow the instructions 
+                    to create an account and log into the app. 
+                    After successfully logging in, restart the app.
+                </p>
+                
+                <div class="version-note">
+                    <h4>Note Version Support:</h4>
+                    <h5>APK: Minimal Android 5 / Android Lollipop</h5>
+                    <h5>Play Store: Minimal Android 11 / Android Red Velvet Cake</h5>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Action Buttons Section -->
+        <section class="action-buttons">
+            <a href="https://kutt.it/register-lovehug" target="_blank" rel="noopener noreferrer" class="btn btn-create">
+                Create Account
+            </a>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank" rel="noopener noreferrer" class="btn">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+            </a>
+            
+            <a href="https://kutt.it/apps_303_nicomanga" target="_blank" rel="noopener noreferrer" class="btn btn-apk">
+                <img src="assets/apk.png" alt="Download APK">
+            </a>
+        </section>
+        
+        <!-- Showcase Gallery Section -->
+        <section class="showcase-section">
+            <div class="showcase">
+                <img src="assets/001.jpeg" alt="App screenshot 1">
+                <img src="assets/002.jpeg" alt="App screenshot 2">
+                <img src="assets/003.jpeg" alt="App screenshot 3">
+                <img src="assets/004.jpeg" alt="App screenshot 4">
+                <img src="assets/005.jpeg" alt="App screenshot 5">
+            </div>
+        </section>
+        
+        <!-- App Description Section -->
+        <footer class="app-description">
+            <p>Read Manga for Free • Daily Updates</p>
+        </footer>
+    </div>
+</body>
+</html>
