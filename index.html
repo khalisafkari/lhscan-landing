@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Lovehug | Read manga for free, daily updates">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="logo192.png">
@@ -12,7 +12,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -20,6 +20,9 @@
   <title data-i18n="meta.title">Lovehug</title>
 </head>
 <body>
+  <!-- Background Pattern -->
+  <div class="bg-pattern"></div>
+  
   <div class="container">
     <!-- Header -->
     <header class="header">
@@ -34,12 +37,12 @@
       <!-- Language Switcher -->
       <div class="lang-switcher">
         <select id="lang-select" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Select Language">
-          <option value="en" data-i18n="lang.en">English</option>
-          <option value="ja" data-i18n="lang.ja">日本語</option>
-          <option value="vi" data-i18n="lang.vi">Tiếng Việt</option>
-          <option value="zh" data-i18n="lang.zh">中文</option>
-          <option value="ko" data-i18n="lang.ko">한국어</option>
-          <option value="id" data-i18n="lang.id">Bahasa Indonesia</option>
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="zh">中文</option>
+          <option value="ko">한국어</option>
+          <option value="id">Bahasa Indonesia</option>
         </select>
       </div>
     </header>
@@ -47,25 +50,47 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span data-i18n="hero.badge">FREE MANGA READER</span>
+        </div>
         <h2 class="hero-title" data-i18n="hero.title">Your Ultimate Manga Reader</h2>
         <p class="hero-subtitle" data-i18n="hero.subtitle">Read manga for free with daily updates</p>
       </div>
     </section>
 
-    <!-- App Notification -->
-    <main class="appNotif">
-      <div class="follow" data-i18n="follow.title">Please follow the steps below</div>
+    <!-- App Notification Card -->
+    <main class="app-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </div>
+        <h3 class="card-title" data-i18n="follow.title">Important Notice</h3>
+      </div>
+      
+      <div class="card-content">
+        <p class="main-text" data-i18n="main.text">
+          Please follow the steps below. Do not use the account creation functionality within the application as it will not work. Press the <a href='https://kutt.to/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> button below and follow the instructions to create an account and log into the app. After successfully logging in, restart the app.
+        </p>
 
-      <!-- Main content text (translatable) -->
-      <p class="main-text" data-i18n="main.text">
-        Please follow the steps below. Do not use the account creation functionality within the application as it will not work. Press the <a href='https://kutt.to/register-lovehug' target='_blank' rel="noreferrer">「CREATE ACCOUNT」</a> button below and follow the instructions to create an account and log into the app. After successfully logging in, restart the app.
-      </p>
-
-      <!-- Version Notes -->
-      <div class="version-note">
-        <h4 data-i18n="note.version.support">NOTE VERSION SUPPORT:</h4>
-        <h5 data-i18n="note.apk">APK : MINIMAL ANDROID 5 / ANDROID LOLLIPOP</h5>
-        <h5 data-i18n="note.playstore">PLAYSTORE : MINIMAL ANDROID 11 / ANDROID Red Velvet Cake</h5>
+        <!-- Version Notes -->
+        <div class="version-note">
+          <h4 data-i18n="note.version.support">VERSION SUPPORT:</h4>
+          <div class="version-items">
+            <div class="version-item">
+              <span class="version-label">APK</span>
+              <span class="version-value" data-i18n="note.apk">Android 5+ / Lollipop</span>
+            </div>
+            <div class="version-item">
+              <span class="version-label">Play Store</span>
+              <span class="version-value" data-i18n="note.playstore">Android 11+</span>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -82,7 +107,7 @@
       </a>
       
       <a class="btn btn-playstore" href='https://play.google.com/store/apps/details?id=com.lovehug&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target='_blank' rel="noopener noreferrer">
-        <img src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' alt='Get it on Google Play' class="playstore-badge">
+        <img src='' alt='Get it on Google Play' class="playstore-badge" id="playstore-img">
       </a>
       
       <a class="btn btn-apk" href='https://kutt.to/apps_303_nicomanga' target='_blank' rel="noopener noreferrer">
@@ -99,28 +124,49 @@
     <section class="showcase-section">
       <h3 class="section-title" data-i18n="showcase.title">App Preview</h3>
       <div class="showcase">
-        <img src="assets/images/001.jpeg" alt="Screenshot 1">
-        <img src="assets/images/002.jpeg" alt="Screenshot 2">
-        <img src="assets/images/003.jpeg" alt="Screenshot 3">
-        <img src="assets/images/004.jpeg" alt="Screenshot 4">
-        <img src="assets/images/005.jpeg" alt="Screenshot 5">
+        <div class="showcase-item">
+          <img src="assets/images/001.jpeg" alt="Screenshot 1">
+          <div class="showcase-overlay"></div>
+        </div>
+        <div class="showcase-item">
+          <img src="assets/images/002.jpeg" alt="Screenshot 2">
+          <div class="showcase-overlay"></div>
+        </div>
+        <div class="showcase-item">
+          <img src="assets/images/003.jpeg" alt="Screenshot 3">
+          <div class="showcase-overlay"></div>
+        </div>
+        <div class="showcase-item">
+          <img src="assets/images/004.jpeg" alt="Screenshot 4">
+          <div class="showcase-overlay"></div>
+        </div>
+        <div class="showcase-item">
+          <img src="assets/images/005.jpeg" alt="Screenshot 5">
+          <div class="showcase-overlay"></div>
+        </div>
       </div>
     </section>
 
     <!-- Features -->
     <section class="features">
       <div class="feature-card">
-        <div class="feature-icon">📚</div>
+        <div class="feature-icon-wrapper">
+          <span class="feature-icon">📚</span>
+        </div>
         <h4 data-i18n="feature.free.title">Free to Read</h4>
         <p data-i18n="feature.free.desc">Access thousands of manga titles completely free</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🔄</div>
+        <div class="feature-icon-wrapper">
+          <span class="feature-icon">🔄</span>
+        </div>
         <h4 data-i18n="feature.updates.title">Daily Updates</h4>
         <p data-i18n="feature.updates.desc">New chapters added every day</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📱</div>
+        <div class="feature-icon-wrapper">
+          <span class="feature-icon">📱</span>
+        </div>
         <h4 data-i18n="feature.mobile.title">Mobile Optimized</h4>
         <p data-i18n="feature.mobile.desc">Perfect reading experience on any device</p>
       </div>
