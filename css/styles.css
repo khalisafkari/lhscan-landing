@@ -247,6 +247,12 @@ hr {
   padding: var(--spacing-md) var(--spacing-lg);
 }
 
+.apk-download img {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* Showcase */
 .showcase {
   display: flex;

@@ -19,8 +19,8 @@
   const DEFAULT_LANG = 'en';
   const SUPPORTED_LANGS = ['en', 'ja', 'vi', 'zh', 'ko', 'id'];
   const STORAGE_KEY = 'lovehug_language';
-  const GEO_API_URL = 'https://ipapi.co/json/';
-  const GEO_TIMEOUT = 3000; // 3 seconds
+  const GEO_API_URL = 'https://api.ipquery.io/?format=json';
+  const GEO_TIMEOUT = 5000; // 5 seconds
 
   let translations = {};
   let currentLang = DEFAULT_LANG;
@@ -65,7 +65,7 @@
           return response.json();
         })
         .then(data => {
-          const countryCode = data.country_code;
+          const countryCode = data.country?.code || data.country_code;
           const detectedLang = COUNTRY_TO_LANG[countryCode] || DEFAULT_LANG;
           resolve(detectedLang);
         })
@@ -112,11 +112,41 @@
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
           element.value = value;
         } else if (element.tagName === 'IMG') {
+          // Special handling for Play Store badge - update src based on language
+          if (element.alt === 'Get it on Google Play' || element.classList.contains('playstore-badge')) {
+            const badges = {
+              en: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+              ja: "https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png",
+              vi: "https://play.google.com/intl/vi_vn/badges/static/images/badges/vi_badge_web_generic.png",
+              zh: "https://play.google.com/intl/zh_cn/badges/static/images/badges/zh_badge_web_generic.png",
+              ko: "https://play.google.com/intl/ko_kr/badges/static/images/badges/ko_badge_web_generic.png",
+              id: "https://play.google.com/intl/id_id/badges/static/images/badges/id_badge_web_generic.png"
+            };
+            element.src = badges[currentLang] || badges['en'];
+          }
           element.alt = value;
         } else {
           element.innerHTML = value;
         }
       }
+    });
+
+    // Update Play Store link images specifically
+    document.querySelectorAll('.playStore img').forEach(img => {
+      const badges = {
+        en: "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png",
+        ja: "https://play.google.com/intl/ja_jp/badges/static/images/badges/ja_badge_web_generic.png",
+        vi: "https://play.google.com/intl/vi_vn/badges/static/images/badges/vi_badge_web_generic.png",
+        zh: "https://play.google.com/intl/zh_cn/badges/static/images/badges/zh_badge_web_generic.png",
+        ko: "https://play.google.com/intl/ko_kr/badges/static/images/badges/ko_badge_web_generic.png",
+        id: "https://play.google.com/intl/id_id/badges/static/images/badges/id_badge_web_generic.png"
+      };
+      img.src = badges[currentLang] || badges['en'];
+    });
+
+    // Update all kutt.it links to kutt.to
+    document.querySelectorAll('a[href*="kutt.it"]').forEach(link => {
+      link.href = link.href.replace('kutt.it', 'kutt.to');
     });
 
     // Update meta tags
